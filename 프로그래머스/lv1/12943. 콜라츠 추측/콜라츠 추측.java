@@ -1,0 +1,18 @@
+class Solution {
+    public long solution(long num) {
+        int cnt = 0;
+
+        while (num != 1) {
+            if (num % 2 == 0) {
+                num /= 2;
+            } else {
+                num = num * 3 + 1;
+            }
+            cnt++;            
+            if (cnt > 500) {
+                return -1;
+            }
+        }
+        return cnt;
+    }
+}
